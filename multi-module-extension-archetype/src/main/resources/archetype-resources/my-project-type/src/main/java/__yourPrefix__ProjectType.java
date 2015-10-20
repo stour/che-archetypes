@@ -14,19 +14,19 @@
 package ${package};
 
 import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.inject.DynaModule;
+import org.eclipse.che.ide.Constants;
 
-import com.google.inject.AbstractModule;
-import com.google.inject.multibindings.Multibinder;
+import com.google.inject.Singleton;
 
-@DynaModule
-public class MyModule extends AbstractModule {
-    /**
-     * {@inheritDoc}
-     */
-    @Override
-    protected void configure() {
-        Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);
-        projectTypeMultibinder.addBinding().to(MyProjectType.class);
+import static ${package}.${yourPrefix}Attributes.${yourPrefix}_PROJECT_TYPE_ID;
+import static ${package}.${yourPrefix}Attributes.${yourPrefix}_PROJECT_TYPE_NAME;
+import static ${package}.${yourPrefix}Attributes.PROGRAMMING_LANGUAGE;
+
+@Singleton
+public class ${yourPrefix}ProjectType extends ProjectType {
+
+    public ${yourPrefix}ProjectType() {
+        super(${yourPrefix}_PROJECT_TYPE_ID, ${yourPrefix}_PROJECT_TYPE_NAME, true, false);
+        addConstantDefinition(Constants.LANGUAGE, "language", PROGRAMMING_LANGUAGE);
     }
 }

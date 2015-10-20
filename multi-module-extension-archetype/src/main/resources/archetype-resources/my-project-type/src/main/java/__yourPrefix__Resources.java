@@ -13,20 +13,11 @@
  *******************************************************************************/
 package ${package};
 
-import org.eclipse.che.api.project.server.type.ProjectType;
-import org.eclipse.che.ide.Constants;
+import com.google.gwt.resources.client.ClientBundle;
+import org.vectomatic.dom.svg.ui.SVGResource;
 
-import com.google.inject.Singleton;
+public interface ${yourPrefix}Resources extends ClientBundle {
 
-import static ${package}.MyAttributes.My_PROJECT_TYPE_ID;
-import static ${package}.MyAttributes.My_PROJECT_TYPE_NAME;
-import static ${package}.MyAttributes.PROGRAMMING_LANGUAGE;
-
-@Singleton
-public class MyProjectType extends ProjectType {
-
-    public MyProjectType() {
-        super(My_PROJECT_TYPE_ID, My_PROJECT_TYPE_NAME, true, false);
-        addConstantDefinition(Constants.LANGUAGE, "language", PROGRAMMING_LANGUAGE);
-    }
+    @Source("${package}/${yourPrefix}Extension.svg")
+    SVGResource ${yourPrefix}ProjectTypeIcon();
 }

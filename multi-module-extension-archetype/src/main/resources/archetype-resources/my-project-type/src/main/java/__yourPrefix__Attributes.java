@@ -1,6 +1,3 @@
-#set( $symbol_pound = '#' )
-#set( $symbol_dollar = '$' )
-#set( $symbol_escape = '\' )
 /*******************************************************************************
  * Copyright (c) 2012-2015 Codenvy, S.A.
  * All rights reserved. This program and the accompanying materials
@@ -13,16 +10,9 @@
  *******************************************************************************/
 package ${package};
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-
-@Path("hello")
-public class MyService {
-
-    @GET
-    @Path("{name}")
-    public String sayHello(@PathParam("name") String name) {
-        return "Hello " + name + " !";
-    }
+public interface ${yourPrefix}Attributes {
+    String ${yourPrefix}_PROJECT_TYPE_ID = "${yourPrefix}projecttype";
+    String ${yourPrefix}_PROJECT_TYPE_NAME = "${yourPrefix} Project Type Name";
+    String ${yourPrefix}_PROJECT_TYPE_CATEGORY = "${yourPrefix} Project Type Category";
+    String PROGRAMMING_LANGUAGE = "java";
 }

@@ -13,11 +13,17 @@
  *******************************************************************************/
 package ${package};
 
-import com.google.gwt.resources.client.ClientBundle;
-import org.vectomatic.dom.svg.ui.SVGResource;
+import org.eclipse.che.inject.DynaModule;
 
-public interface MyResources extends ClientBundle {
+import com.google.inject.AbstractModule;
 
-    @Source("${package}/MyExtension.svg")
-    SVGResource MyProjectTypeIcon();
+@DynaModule
+public class ${yourPrefix}GuiceModule extends AbstractModule {
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void configure() {
+        bind(${yourPrefix}Service.class);
+    }
 }

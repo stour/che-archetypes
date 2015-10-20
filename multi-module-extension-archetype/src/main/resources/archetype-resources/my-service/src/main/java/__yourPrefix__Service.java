@@ -13,11 +13,16 @@
  *******************************************************************************/
 package ${package};
 
-import com.google.gwt.resources.client.ClientBundle;
-import org.vectomatic.dom.svg.ui.SVGResource;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 
-public interface MyResources extends ClientBundle {
+@Path("hello")
+public class ${yourPrefix}Service {
 
-    @Source("${package}/MyExtension.svg")
-    SVGResource MyProjectTypeIcon();
+    @GET
+    @Path("{name}")
+    public String sayHello(@PathParam("name") String name) {
+        return "Hello " + name + " !";
+    }
 }

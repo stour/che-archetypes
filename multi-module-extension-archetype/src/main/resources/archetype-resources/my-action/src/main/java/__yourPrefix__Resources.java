@@ -13,22 +13,11 @@
  *******************************************************************************/
 package ${package};
 
-import org.eclipse.che.ide.api.extension.Extension;
-import org.eclipse.che.ide.api.icon.Icon;
-import org.eclipse.che.ide.api.icon.IconRegistry;
+import com.google.gwt.resources.client.ClientBundle;
+import org.vectomatic.dom.svg.ui.SVGResource;
 
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
+public interface ${yourPrefix}Resources extends ClientBundle {
 
-import static ${package}.MyAttributes.My_PROJECT_TYPE_CATEGORY;
-
-@Singleton
-@Extension(title = "My Project Type Extension", version = "1.0.0")
-public class MyExtension {
-
-    @Inject
-    public MyExtension(MyResources resources, IconRegistry iconRegistry) {
-        iconRegistry.registerIcon(new Icon(My_PROJECT_TYPE_CATEGORY + ".samples.category.icon",
-                resources.MyProjectTypeIcon()));
-    }
+    @Source("${package}/${yourPrefix}Extension.svg")
+    SVGResource ${yourPrefix}ProjectTypeIcon();
 }
