@@ -4,7 +4,7 @@
     "category":"Samples",
     "description":"A client extension packaged as a Che plug-in",
     "runners":{
-      "default":"system:/java/web/tomcat7",
+      "default":"system:/java/standalone/simple/cli",
       "configs":{
         "recommend":{
           "ram":1024

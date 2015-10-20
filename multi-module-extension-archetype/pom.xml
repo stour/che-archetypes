@@ -20,7 +20,7 @@
     </parent>
     <artifactId>che-multi-module-archetype</artifactId>
     <packaging>maven-archetype</packaging>
-    <name>Che :: Archetypes :: Multi modules Extension</name>
+    <name>Che :: Archetypes :: Multi module Extension</name>
     <description>Provides version of third parties artifacts to use in Codenvy platform projects</description>
     <url>https://codenvy.com/maven-depmgt-pom/che-ide-parent/examples-parent/my-multi-extension</url>
     <licenses>
