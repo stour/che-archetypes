@@ -9,4 +9,6 @@
 #   Codenvy, S.A. - initial API and implementation
 #
 
-
+FROM codenvy/jdk8_maven3_tomcat8
+RUN mkdir -p /home/user/project/
+ADD $src$ /home/user/project/
