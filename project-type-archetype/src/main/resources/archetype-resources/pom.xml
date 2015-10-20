@@ -22,7 +22,7 @@
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
     <packaging>che-plugin</packaging>
-    <name>Tutorial :: ${yourPrefix} Project Type</name>
+    <name>Example :: ${yourPrefix} Project Type</name>
     <dependencies>
         <dependency>
             <groupId>com.google.gwt.inject</groupId>
