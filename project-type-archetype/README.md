@@ -11,7 +11,7 @@ This project is licensed as EPL 1.0.
     mvn clean install
 
 # Use the archetype to generate a new plug-in
-    mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=tutorial -DarchetypeArtifactId=che-project-type-archetype -DinteractiveMode=false
+    mvn archetype:generate -DarchetypeCatalog=local -DarchetypeGroupId=org.eclipse.che.archetype -DarchetypeArtifactId=che-project-type-archetype -DinteractiveMode=false
 This will generate a new plugin using default values for `groupId`, `artifactId`, `version`, `package` and `yourPrefix`.
 Value of `yourPrefix` will be used as a prefix to name the files of your new plug-in. This property needs to be a value that can generate valid Java classes.
 If you want to choose your own values for these properties simply execute the same command in interactive mode.
