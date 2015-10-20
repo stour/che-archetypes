@@ -13,17 +13,20 @@
  *******************************************************************************/
 package ${package};
 
+import org.eclipse.che.api.project.server.type.ProjectType;
 import org.eclipse.che.inject.DynaModule;
 
 import com.google.inject.AbstractModule;
+import com.google.inject.multibindings.Multibinder;
 
 @DynaModule
-public class ${yourPrefix}Module extends AbstractModule {
+public class ${yourPrefix}GuiceModule extends AbstractModule {
     /**
      * {@inheritDoc}
      */
     @Override
     protected void configure() {
-        bind(${yourPrefix}Service.class);
+        Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);
+        projectTypeMultibinder.addBinding().to(${yourPrefix}ProjectType.class);
     }
 }
