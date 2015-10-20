@@ -24,7 +24,7 @@
           <defaultValue>my-project-type</defaultValue>
         </requiredProperty>
         <requiredProperty key="version">
-          <defaultValue>1.0.0-SNAPSOT</defaultValue>
+          <defaultValue>1.0.0-SNAPSHOT</defaultValue>
         </requiredProperty>
         <requiredProperty key="package">
           <defaultValue>tutorial</defaultValue>
