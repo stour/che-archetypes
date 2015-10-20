@@ -1,8 +1,8 @@
 [
   {
-    "displayName":"My Assembly",
+    "displayName":"My Client Extension",
     "category":"Samples",
-    "description":"A Che plug-in containing several extensions",
+    "description":"A client extension packaged as a Che plug-in",
     "runners":{
       "default":"system:/java/web/tomcat7",
       "configs":{
