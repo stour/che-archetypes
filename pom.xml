@@ -20,7 +20,6 @@
     </parent>
     <groupId>org.eclipse.che.archetype</groupId>
     <artifactId>che-archetypes-parent</artifactId>
-    <version>3.13.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Che :: Archetypes :: Parent</name>
     <modules>
