@@ -1,10 +1,13 @@
 [
   {
-    "displayName":"My Client Extension",
+    "displayName":"${yourPrefix} Project Type",
     "category":"Samples",
-    "description":"A client extension packaged as a Che plug-in",
+    "description":"A Che plug-in showing how to add a new project type",
+    "source": {
+      "location": ""
+    },
     "runners":{
-      "default":"system:/java/standalone/simple/cli",
+      "default":"system:/myprojecttype/standalone",
       "configs":{
         "recommend":{
           "ram":1024
