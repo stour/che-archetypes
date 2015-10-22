@@ -1,13 +1,18 @@
 [
   {
-    "displayName":"${yourPrefix} Project Type",
+    "displayName":"Sample ${yourPrefix} Project Type Project",
     "category":"Samples",
-    "description":"A Che plug-in showing how to add a new project type",
+    "description":"",
     "source": {
-      "location": ""
+      "type": "git",
+      "location": "https://github.com/codenvy-templates/desktop-console-java.git",
+      "parameters": {
+        "branch": "master",
+        "keepVcs": "false"
+      }
     },
     "runners":{
-      "default":"system:/myprojecttype/standalone",
+      "default":"system:/java/standalone/simple/cli",
       "configs":{
         "recommend":{
           "ram":1024
