@@ -50,10 +50,16 @@
         <fileSet encoding="UTF-8">
             <directory>src/main/che/machines</directory>
             <includes>
-                <include>**/*</include>
+                <include>**/Dockerfile</include>
             </includes>
         </fileSet>
-        <fileSet encoding="UTF-8">
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/main/che/machines</directory>
+            <includes>
+                <include>**/Misc.json</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
             <directory>src/main/che/templates</directory>
             <includes>
                 <include>**/*.json</include>

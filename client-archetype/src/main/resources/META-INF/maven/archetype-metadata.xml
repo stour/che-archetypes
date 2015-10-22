@@ -47,18 +47,6 @@
                 <include>**/*.svg</include>
             </includes>
         </fileSet>
-        <fileSet encoding="UTF-8">
-            <directory>src/main/che/machines</directory>
-            <includes>
-                <include>**/Dockerfile</include>
-            </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-            <directory>src/main/che/templates</directory>
-            <includes>
-                <include>**/*.json</include>
-            </includes>
-        </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
             <directory></directory>
             <includes>
