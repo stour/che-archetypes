@@ -13,6 +13,7 @@
  *******************************************************************************/
 package ${package};
 
+import org.eclipse.che.api.project.server.handlers.ProjectHandler;
 import org.eclipse.che.api.project.server.type.ProjectType;
 import org.eclipse.che.inject.DynaModule;
 
@@ -28,5 +29,6 @@ public class ${yourPrefix}GuiceModule extends AbstractModule {
     protected void configure() {
         Multibinder<ProjectType> projectTypeMultibinder = Multibinder.newSetBinder(binder(), ProjectType.class);
         projectTypeMultibinder.addBinding().to(${yourPrefix}ProjectType.class);
+	Multibinder.newSetBinder(binder(), ProjectHandler.class).addBinding().to(${yourPrefix}ProjectGenerator.class);
     }
 }
