@@ -66,13 +66,11 @@ public class ${yourPrefix}ProjectGenerator implements CreateProjectHandler {
             "</project>";
 
     private static final String GITIGNORE_TEMPLATE = "# Idea #\n" +
-            "##################\n" +
             "*.iml\n" +
             "*.ipr\n" +
             "*.iws\n" +
-            ".idea/\n" +
+            ".idea\n" +
             "# Compiled source #\n" +
-            "###################\n" +
             "*.com\n" +
             "*.class\n" +
             "*.dll\n" +
@@ -81,7 +79,6 @@ public class ${yourPrefix}ProjectGenerator implements CreateProjectHandler {
             "*.so\n" +
             "*.sh\n" +
             "# Packages #\n" +
-            "############\n" +
             "# it's better to unpack these files and commit the raw source\n" +
             "# git has its own built in compression methods\n" +
             "*.7z\n" +
@@ -95,12 +92,10 @@ public class ${yourPrefix}ProjectGenerator implements CreateProjectHandler {
             "*.war\n" +
             "*.ear\n" +
             "# Logs and databases #\n" +
-            "######################\n" +
             "*.log\n" +
             "*.sql\n" +
             "*.sqlite\n" +
             "# OS generated files #\n" +
-            "######################\n" +
             ".DS_Store\n" +
             "ehthumbs.db\n" +
             "Icon?\n" +
