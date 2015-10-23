@@ -154,19 +154,12 @@ public class ${yourPrefix}ProjectGenerator implements CreateProjectHandler {
 
     private static final String PROJECT_JSON_TEMPLATE = "{%n" +
             "  \"type\":\"" + ${yourPrefix}_PROJECT_TYPE_ID + "\",%n" +
-            "  \"properties\":[%n" +
-            "    {%n" +
-            "      \"name\":\"builder.name\",%n" +
-            "      \"value\":[%n" +
-            "        \"maven\"%n" +
-            "      ]%n" +
-            "    },%n" +
-            "    {%n" +
-            "      \"name\":\"runner.name\",%n" +
-            "      \"value\":[%n" +
-            "        \"java-standalone-default\"%n" +
-            "      ]%n" +
-            "    }%n" +
+            "  \"attributes\":{%n" +
+            "    \"language\":[%n" +
+            "      \"java\"%n" +
+            "    ]%n" +
+            "  },%n" +
+            "  \"mixinTypes\":[%n" +
             "  ]%n" +
             "}";
 
