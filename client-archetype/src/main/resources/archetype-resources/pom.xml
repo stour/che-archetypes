@@ -16,7 +16,7 @@
     <parent>
         <artifactId>maven-depmgt-pom</artifactId>
         <groupId>org.eclipse.che.depmgt</groupId>
-        <version>3.13.1-SNAPSHOT</version>
+        <version>3.13.2-SNAPSHOT</version>
     </parent>
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
@@ -89,7 +89,7 @@
             <plugin>
                 <groupId>org.eclipse.che.core</groupId>
                 <artifactId>che-core-maven-plugin</artifactId>
-                <version>3.13.1-SNAPSHOT</version>
+                <version>${che.core.version}</version>
                 <extensions>true</extensions>
             </plugin>
         </plugins>
