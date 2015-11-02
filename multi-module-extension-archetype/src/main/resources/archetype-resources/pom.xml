@@ -18,15 +18,17 @@
         <groupId>org.eclipse.che.depmgt</groupId>
         <version>3.13.2-SNAPSHOT</version>
     </parent>
-    <groupId>org.eclipse.che.archetype</groupId>
-    <artifactId>che-archetypes-parent</artifactId>
+    <groupId>${groupId}</groupId>
+    <artifactId>${artifactId}</artifactId>
+    <version>${version}</version>
     <packaging>pom</packaging>
-    <name>Che :: Archetypes :: Parent</name>
+    <name>Example :: ${yourPrefix} Multi Extension</name>
     <modules>
-        <module>client-archetype</module>
-        <module>server-archetype</module>
-        <module>project-type-archetype</module>
-	<module>multi-module-extension-archetype</module>
+        <module>${yourPrefix}-action</module>
+        <module>${yourPrefix}-project-type</module>
+        <module>${yourPrefix}-service</module>
+        <module>${yourPrefix}-theme</module>
+        <module>${yourPrefix}-assembly</module>
     </modules>
     <repositories>
         <repository>
@@ -34,23 +36,25 @@
             <name>codenvy public</name>
             <url>https://maven.codenvycorp.com/content/groups/public/</url>
         </repository>
-        <repository>
-            <id>codenvy-public-snapshots-repo</id>
-            <name>codenvy public snapshots</name>
-            <url>https://maven.codenvycorp.com/content/repositories/codenvy-public-snapshots/</url>
-        </repository>
     </repositories>
-    <pluginRepositories>
-        <pluginRepository>
-            <id>codenvy-public-repo</id>
-            <name>codenvy public</name>
-            <url>https://maven.codenvycorp.com/content/groups/public/</url>
-        </pluginRepository>
-        <pluginRepository>
-            <id>codenvy-public-snapshots-repo</id>
-            <name>codenvy public snapshots</name>
-            <url>https://maven.codenvycorp.com/content/repositories/codenvy-public-snapshots/</url>
-        </pluginRepository>
-    </pluginRepositories>
+    <build>
+        <sourceDirectory>src/main/java</sourceDirectory>
+        <outputDirectory>target/classes</outputDirectory>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.eclipse.che.core</groupId>
+                <artifactId>che-core-maven-plugin</artifactId>
+                <version>${che.core.version}</version>
+                <extensions>true</extensions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
-
